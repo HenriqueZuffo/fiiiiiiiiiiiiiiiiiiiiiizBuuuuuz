@@ -1,5 +1,4 @@
 defmodule FizzBuuz do
-
   def build(file_name) do
     file_name
     |> File.read()
@@ -15,7 +14,8 @@ defmodule FizzBuuz do
     {:ok, result}
   end
 
-  defp handle_file_read({:error, reason}), do: {:error, "Ocorreu um erro ao ler o arquivo: #{reason}"}
+  defp handle_file_read({:error, reason}),
+    do: {:error, "Ocorreu um erro ao ler o arquivo: #{reason}"}
 
   defp convert_and_evaluate_numbers(element) do
     element
